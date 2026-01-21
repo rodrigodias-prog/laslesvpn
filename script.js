@@ -8,8 +8,9 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
   
-  slidesPerView: 3,
   spaceBetween: 30,
+
+
 
   centeredSlides: true,
 
@@ -18,4 +19,16 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,   // mobile
+    },
+    768: {
+      slidesPerView: 2,   // tablet
+    },
+    1280: {
+      slidesPerView: 3,  // desktop
+    }
+  }
 });
